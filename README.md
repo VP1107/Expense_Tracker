@@ -1,12 +1,13 @@
-# Expense Tracker
+# Spendr — Expense Tracker
 
-A simple and efficient Expense Tracker web application built with a **FastAPI** backend and a plain HTML/CSS/JS **frontend**.
+**Spendr** is a simple, sleek, and efficient Expense Tracker web application built with a **FastAPI** backend and a responsive vanilla HTML/CSS/JS **frontend**.
 
 ## Features
 
 - **User Authentication**: Secure sign up and log in functionality using bcrypt.
-- **Manage Expenses**: Add, view, and organize expenses. Let's you track your money accurately with decimals.
-- **Categorization & Descriptions**: Keep your expenses categorized with detailed descriptions.
+- **Manage Expenses**: Add, view, edit, and delete expenses through an intuitive UI. Tracks currency in INR (₹).
+- **Categorization & Descriptions**: Keep your expenses categorized with detailed descriptions. Includes dynamic filtering by name and category.
+- **Interactive Dashboard**: A sleek sidebar displays total spent, total count, and a dynamic breakdown of expenses by category.
 - **Secure**: Features token-based authentication (JWT) and modern security practices for storing passwords.
 - **User-Specific Data**: Each user has their own secluded expenses workspace.
 
