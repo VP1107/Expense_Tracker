@@ -7,6 +7,22 @@
 - **Frontend Application**: [https://spendr-ouyp.onrender.com](https://spendr-ouyp.onrender.com)
 - **Backend API**: [https://spendr-backend-1e95.onrender.com](https://spendr-backend-1e95.onrender.com)
 
+## Screenshots & Demo
+
+<details>
+<summary>Click to view screenshots and demo</summary>
+
+### Login Page
+![Login Page](Assets/LoginPage.png)
+
+### Dashboard
+![Dashboard](Assets/Dashboard.png)
+
+### Video Demo
+[Watch the Demo Video](Assets/Using%20Spendr.mp4)
+
+</details>
+
 ## Features
 
 - **User Authentication**: Secure sign up and log in functionality using bcrypt.
