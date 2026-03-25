@@ -2,6 +2,11 @@
 
 **Spendr** is a simple, sleek, and efficient Expense Tracker web application built with a **FastAPI** backend and a responsive vanilla HTML/CSS/JS **frontend**.
 
+## Live Links
+
+- **Frontend Application**: [https://spendr-ouyp.onrender.com](https://spendr-ouyp.onrender.com)
+- **Backend API**: [https://spendr-backend-1e95.onrender.com](https://spendr-backend-1e95.onrender.com)
+
 ## Features
 
 - **User Authentication**: Secure sign up and log in functionality using bcrypt.
@@ -14,7 +19,7 @@
 ## Tech Stack
 
 - **Backend**: FastAPI (Python)
-- **Database**: SQLite (managed with SQLAlchemy ORM)
+- **Database**: PostgreSQL (managed with SQLAlchemy ORM)
 - **Frontend**: HTML, CSS, Vanilla JavaScript
 
 ## Project Structure
@@ -32,6 +37,8 @@ Expense_Tracker/
 │   └── user.py          # Routes for user registration and authentication
 ├── frontend/            # Frontend application
 │   └── index.html       # The single-page frontend interface
+├── requirements.txt     # Python dependencies
+├── start.sh             # Startup script for production environment
 └── .env                 # Environment variables for secret keys
 ```
 
@@ -51,7 +58,7 @@ Expense_Tracker/
    ```
 3. Install the required dependencies:
    ```bash
-   pip install fastapi uvicorn sqlalchemy "passlib[bcrypt]" python-jose python-dotenv python-multipart
+   pip install -r requirements.txt
    ```
 4. Configure environment variables in the `.env` file for database URI and Secret Keys.
 5. Start the backend server:
@@ -62,8 +69,8 @@ Expense_Tracker/
 
 ### 2. Frontend Setup
 
-The backend has CORS explicitly configured to accept requests from `http://127.0.0.1:5500`.
+The backend has CORS explicitly configured to accept requests from `http://localhost:3000`.
 
-1. To run the frontend correctly, navigate to the `frontend/` directory and use a local development server on port 5500.
-2. **Recommended Method (VS Code):** Install the **Live Server** extension, open `frontend/index.html`, right-click on the code, and select **Open with Live Server**. Ensure that the Live Server is configured to use port `5500`.
+1. To run the frontend correctly, navigate to the `frontend/` directory and use a local development server on port 3000.
+2. **Recommended Method (VS Code):** Install the **Live Server** extension, open `frontend/index.html`, right-click on the code, and select **Open with Live Server**. Ensure that the Live Server is configured to use port `3000`.
 3. You can now use the application in your browser!

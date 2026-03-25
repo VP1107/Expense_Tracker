@@ -14,7 +14,6 @@ router = APIRouter(prefix="/users", tags=["users"])
 def signup(user: schemas.UserCredentials, db: Session = Depends(get_db)):
     existing_user = db.query(models.User).filter(models.User.email == user.email).first()
     if existing_user:
-        # Avoid leaking whether an email is registered
         raise HTTPException(status_code=409, detail="Registration failed")
 
     new_user = models.User(
@@ -31,7 +30,6 @@ def signup(user: schemas.UserCredentials, db: Session = Depends(get_db)):
 
 @router.post("/login", response_model=schemas.TokenResponse)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    # OAuth2PasswordRequestForm uses `username`; this API treats it as email.
     user = db.query(models.User).filter(models.User.email == form_data.username).first()
 
     if not user or not verify_password(form_data.password, user.password):
